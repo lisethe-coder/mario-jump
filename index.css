@@ -10,8 +10,7 @@ body{
 	position: absolute;
 	display: flex;
 	margin-top: 5%;
-	padding: 15px 35px;
-	width: 100px;
+	padding: 15px 25px;
     background-color: #3e6bd06e;
     top: 35px;
     left: 25px;
@@ -24,6 +23,11 @@ h1 {
 	background-color: red;
 	padding: 9px 0;
 	margin: 0;
+}
+.coins-counter {
+	font-size: 40px; 
+	margin-left: 15px; 
+	font-weight: bold;
 }
 .outer-container {
 	background-image: url("images/mario-wallpaper.jpg");
@@ -66,16 +70,23 @@ button {
 	0% {
 		top: 150px;
 	}
-	100% {
+	50% {
 		top: 50px;
 
 	}
+	90% {
+		top: 50px;
+		transform: perspective(600px) rotateY(360deg);
+	}
+	100% {
+    	opacity: 0;
+  	}
 }
 .appear {
-	animation: coin-appear 1s;
+	animation: coin-appear 1.5s cubic-bezier(.87,-.41,.19,1.44);
     animation-delay: 1s;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
+/*    animation-fill-mode: forwards;
+    animation-direction: normal;*/
 }
 .coin {
 	position: absolute;

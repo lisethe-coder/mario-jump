@@ -136,5 +136,13 @@ button {
 	animation: mario-jump 2s;
 }
 
-
+@media only screen and (max-device-width: 375px) {
+	.coin {
+		top: 160px;
+    	left: 180px;
+	}
+	.bottom-area {
+		top: 495px;
+	}
+}
 

@@ -1,0 +1,129 @@
+body{
+	overflow: hidden;
+}
+.inner-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.points {
+	position: absolute;
+	display: flex;
+	margin-top: 5%;
+	padding: 15px 35px;
+	width: 100px;
+    background-color: #3e6bd06e;
+    top: 35px;
+    left: 25px;
+}
+h1 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	background-color: red;
+	padding: 9px 0;
+	margin: 0;
+}
+.outer-container {
+	background-image: url("images/mario-wallpaper.jpg");
+	background-size: cover;
+	height: 100vh;
+	background-position: bottom;
+	margin-top: 0;
+}
+
+.align-photos {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: absolute;
+	margin: 8%;
+}
+.bottom-area {
+	background-color: green;
+	padding: 10px 0;
+	border-top: 3px dashed;
+	border-bottom: 3px dashed;
+	width: 100%;
+	position: absolute;
+	top: 564px;
+	text-align: center;
+}
+
+button {
+	text-align: center;
+	background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Coin animation */
+@keyframes coin-appear {
+	0% {
+		top: 150px;
+	}
+	100% {
+		top: 50px;
+
+	}
+}
+.appear {
+	animation: coin-appear 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+.coin {
+	position: absolute;
+	top: 200px;
+    left: 250px;
+}
+
+/* Block animation */
+@keyframes question-bounce {
+	0% {
+		top: 80px;
+	}
+	100% {
+		top: 100px;
+	}
+}
+.question-block {
+	position: absolute;
+	left: 125px;
+	top: 100px;
+}
+.bounce {
+	animation: question-bounce 1s;
+	animation-delay: 1s;
+}
+
+/* Jump animation */
+@keyframes mario-jump {
+	10% {
+		bottom: -480px;
+	}
+	50% {
+		bottom: -305px;
+	}
+	100% {
+		bottom: -480px;
+	}
+}
+
+.mario-bross	{
+	position: absolute;
+	bottom: -470px;
+	z-index: 1;
+	left: 100px;
+}
+.jump {
+	animation: mario-jump 2s;
+}
+
+
+

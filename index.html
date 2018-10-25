@@ -1,0 +1,47 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Not Fancy Mario Jump</title>
+	<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+	<div id="app">
+		<h1>Not Fancy Mario Jump</h1>
+		<div class="outer-container">
+			<div class="inner-container">
+				<div class="points">
+					<div><img src="images/coin.png" alt="" width="50px"></div>
+					<span style="font-size: 32px; margin-left: 15px; font-weight: bold" >	{{coinsCounter}}
+					</span>
+				</div>
+				<div  @animationend="removeAnimation"
+						:class="['coin', {'appear': isAppear}]">
+					<img src="images/coin.png" alt="" width="50px">
+				</div>
+				<div class="align-photos">
+					
+					<div 
+						:class="['question-block', {'bounce': isBounce}]">
+						<img src="images/question-block.jpg" alt="" width="100px;">
+					</div>
+					<div @animationend="isJump = false" 
+						:class="['mario-bross', {jump: isJump}]">
+						<img src="images/mario_transparent.png" alt="" width="150px">
+					</div>
+				
+				</div>
+				<div class="bottom-area">
+					<button @click='getMarioJump'>JUMP</button>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<script src="vue.js"></script>
+</body>
+</html>
